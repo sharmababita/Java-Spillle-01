@@ -14,7 +14,7 @@ const displayCost  = document.querySelector("#Cost");
 let wins = 0;
 let draws = 0;
 let Losses = 0;
-let cost = 1000;
+let cost = 100;
 let cash = 2000;
 
 let yourChoice;
@@ -63,14 +63,16 @@ function computerChoice() {
 } else if (
     computerNumber === "rock" && yourChoice === "paper"){
         displayResults.innerHTML = "You win!";
+cash = cash + cost;
+displayCash.innerHTML = cash;
 
         wins++;
         displayWins.innerHTML = "Wins: " + wins;
     } else if (computerNumber === "paper" && yourChoice === "scissors") {
         displayResults.innerHTML = " You win!";
+        cash = cash + cost;
+displayCash.innerHTML = cash;
 
-        wins++;
-        displayWins.innerHTML = "Wins: " + wins;
 
         wins++;
         displayWins.innerHTML = "Wins: " + wins;
@@ -78,11 +80,15 @@ function computerChoice() {
 
         else if (computerNumber === "scissors" && yourChoice === "rock") { 
             displayResults.innerHTML === "You win!";    
+            cash = cash + cost;
+            displayCash.innerHTML = cash;
             
             wins++;
         displayWins.innerHTML = "Wins: " + wins;
     } else {
         displayResults.innerHTML = "You lose!";
+        cash = cash - cost;
+displayCash.innerHTML = cash;
 
         Losses++;
         displayLosses.innerHTML = "Losses: " + wins;
