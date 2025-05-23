@@ -9,16 +9,17 @@ const displayWins = document.querySelector("#Wins");
 const displayDraws = document.querySelector("#Draws");
 const displayLosses = document.querySelector("#Losses");
 const displayCash = document.querySelector("#Cash");
-const displayCost = document.querySelector("#Cost");
+const displayCost  = document.querySelector("#Cost");
 
 let wins = 0;
 let draws = 0;
 let Losses = 0;
 let cost = 1000;
 let cash = 2000;
-let countingNumber =;
 
 let yourChoice;
+displayCost.innerHTML = cost;
+displayCash.innerHTML = cash;
 
 const choices =["rock", "paper", "scissors"];
 
@@ -86,9 +87,6 @@ function computerChoice() {
         Losses++;
         displayLosses.innerHTML = "Losses: " + wins;
     }
-
     
 
-
-
-
+    }
